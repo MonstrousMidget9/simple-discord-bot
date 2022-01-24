@@ -85,7 +85,7 @@ class reddit(commands.Cog):
                 try:
                     async with async_timeout.timeout(180): # timeout after 3 mins
                         reaction, user = await self.bot.wait_for('reaction_add', check=check)
-                except TimeoutError:
+                except:
                     print("Timeout")
                     break
 
